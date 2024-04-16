@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 100% of the viewport height */
+  height: 100vh;
+  background-color: hsl(0, 0%, 85%);
+}
+
+#display {
+  width: 100%;
+  padding: 20px;
+  font-size: 5rem;
+  text-align: left;
+  border: none;
+  background-color: hsl(0, 0%, 25%);
+  color: white;
+}
+
+#calculator {
+  font-family: Arial, sans-serif;
+  background-color: hsl(0, 0%, 15%);
+  border-radius: 15px;
+  border: none;
+  max-width: 500px;
+  /* If any elements on the calc overflows, it will be hidden on page */
+  overflow: hidden;
+}
+
+#keys {
+  display: grid;
+  /* repeat 4 in a column with 1 fractional unit */
+  grid-template-columns: repeat(4, 1fr);
+  /* gap between the rows */
+  gap: 10px;
+  padding: 30px;
+}
+
+button {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  /* Can also put none instead of 0 */
+  border: 0;
+  background-color: hsl(0, 0%, 30%);
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Hover psuedo class - button becomes slightly ligther upon hover */
+button:hover {
+  background-color: hsl(0, 0%, 40%);
+}
+
+/* Active psuedo class */
+button:active {
+  background-color: hsl(0, 0%, 60%);
+}
+
+.operator-btn {
+  background-color: rgb(184, 150, 105);
+}
+
+.operator-btn:hover {
+  background-color: rgb(214, 178, 123);
+}
+
+.operator-btn:active {
+  background-color: rgb(255, 212, 148);
+}
